@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap');
+
+:root {
+    --primary-text-color: #fff;
+    --pinkish-text-color: #f85a8f;
+    --faded-text-color:#65686b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ***********************************
+   common class
+*********************************** */
+
+.left-rignt-body-spacer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 1rem;
+}
+
+.padding-top-bottom {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.padding-top {
+    padding-top: 30px;
+}
+
+.heading p {
+
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.gray-background-color {
+    background-color: #ecf1f7;
+}
+
+.paragraph p {
+text-align: center;
+
+padding-left: 320px;
+padding-right: 320px;
+font-size: 21px;
+color: rgb(177, 170, 170);
+}
+
+@media screen and (max-width:1482px) {
+    .paragraph p {
+        /* padding: auto ; */
+        padding-left: 1px ;
+        padding-right: 1px ;
+    
+    }
+    .left-rignt-body-spacer {
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding-top: 1rem; */
+    }
+
+}
+
+/* ***********************************
+   NavBar section 
+*********************************** */
+
+
+navbar {
+    position: sticky;
+}
+
+.navbar-container {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.navbar-container .navbar-logo p {
+    color: var(--primary-text-color);
+    display: inline-block;
+}
+
+.navbar-container .navbar-logo .logo-bold-text {
+    color: var(--primary-text-color);
+
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.navbar-container .navbar-logo .logo-small-text {
+    font-size: 13px;
+    color: #dad0d0;
+    
+    font-weight: bold;
+
+}
+.navbar-container .hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+.navbar-container .navbar-menu ul li {
+    list-style-type: none;
+    margin: auto 20px;
+}
+
+.navbar-container .navbar-menu ul li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.navbar-container .navbar-menu ul li:nth-child(5) {
+    
+    border-left: 2px solid #cac2c2;
+}
+
+.navbar-container .navbar-menu ul li:nth-child(6) {
+    /* padding: 5px; */
+    border-bottom: 3px solid var(--pinkish-text-color);
+}
+
+.navbar-menu .dropdown i{
+    color: white;
+}
+.toggle-navbar{
+    display: block !important;
+    transition: 2s ease-in-out;
+}
+ 
+@media screen and (max-width:1300px) {
+    .navbar-menu{
+        display: none;
+    }
+    .navbar-container .hamburger{
+        display:block;
+        color: white;
+        font-size: 25px;
+    }
+   .navbar-container .navbar-menu{
+    background-color: var(--pinkish-text-color);
+    border-radius: 10px;
+    position: absolute;
+    right:40px;
+    top:38px;
+   }                  
+    .navbar-container .navbar-menu ul{
+        display: block;
+    }
+    .navbar-container .navbar-menu ul li{
+        /* padding-top: 15px; */
+        padding: 10px 20px;
+    }
+    
+     .navbar-container .navbar-menu ul li:nth-child(5) {
+    display: none;
+    }
+}
+
+/* ***********************************
+   background image 
+*********************************** */
+.main-container{
+    background: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+   
+}
+
+ 
+
+
+/* ***********************************
+   Hero section 
+*********************************** */
+
+
+.hero {
+    height: calc(110vh);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.hero .big-text p {
+    padding-top: 29vh;
+    display: inline-block;
+    font-size: 3rem;
+    text-align: center;
+    /* font-weight: bold; */
+    color: var(--primary-text-color);
+}
+
+.main-button input[type="button"] {
+
+    padding: 20px 22px;
+    width: 20rem;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--pinkish-text-color);
+    ;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: var(--primary-text-color);
+}
+
+
+
+/* ***********************************
+   Our Mission  section 
+*********************************** */
+
+
+
+
+
+
+/* ***********************************
+   Our People  section 
+*********************************** */
+
+ 
+
+.our-people-card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.our-people-card-container .card {
+    width: 420px;
+}
+
+.card .card-heading{
+    font-size: 20px;
+    font-weight: bold;
+    color:var(--faded-text-color);
+}
+.card .card-text{
+    color: var(--faded-text-color);
+    font-size: 18px;
+    
+}
+.card .card-image img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: contain;
+}
+
+.card hr {
+    margin-top: 20px;
+   }
+
+
+
+
+/* ***********************************
+       Obligation and contract   section 
+    *********************************** */
+    .no-obligation-container{
+
+        background-color:   #fc568b;
+    }
+.obligation{
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    
+}
+    .no-obligation-container .obligation-text p{
+        font-size: 30px;
+        display: inline-block;
+        padding-top: 11px;
+        text-align: center;
+    }
+.no-obligation-container input[type="button"]{
+    background-color: #b84d6f;
+}
+
+
+
+
+/* ***********************************
+       footer section 
+    *********************************** */
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: auto; */
+    justify-content: space-evenly;
+}
+    .footer-links ul li{
+        list-style-type: none;
+        padding: 10px 0;
+    }
+    .footer-links ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--faded-text-color);
+    }
+    .footer-links ul li:nth-child(1) a{
+        font-weight: bold;
+    }
+    .footer-links ul li i{
+       padding:20px 15px 20px 0px;
+        color: var(--faded-text-color);
+        font-size: 40px;
+    }
+    footer hr{
+        margin-top: 40px;
+
+    }
+
+    .copyright-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
