@@ -214,19 +214,20 @@
     height: calc(93vh);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.hero .big-text p {
-    padding-top: 29vh;
-    display: inline-block;
+.hero .big-text p {     
+     display: inline-block;
     font-size: 3rem;
     text-align: center;
     color: var(--primary-text-color);
 }
-
+ 
+ 
 .main-button input[type="button"] {
-
+    
     padding: 20px 22px;
     width: 20rem;
     font-size: 18px;
@@ -304,10 +305,17 @@
 
 .obligation {
     display: flex;
-    justify-content: center;
-    column-gap: 100px;
+    justify-content:space-evenly;
+    /* column-gap: 100px; */
     flex-wrap: wrap;
 
+}
+@media screen and (max-width:1267px){
+    
+.obligation .padding-top-bottom{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 }
 
 .no-obligation-container .obligation-text p {
